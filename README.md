@@ -4,6 +4,30 @@ This code provisions a terraform infrastructure using the Azure cloud.
 Once the infrastructure is ready, it will provision an `Azure Kubernetes Service` environment integrated with an `Azure Database for PostgreSQL Flexible Server`, `Azure Container Registry`, `Virtual Networks`, `Private DNS Zones`, `Azure Key Vaults` and `Private Endpoints`. All resources are private (except ACR) and communicate privately to increase and maintain security.
 A Virtual Machine with OpenVPN free for access to the cluster and other private resources is also created.
 
+![infra](./images/infra.png)
+
+
+### Networking
+
+Create a Hub Spoke topology with a VPN to connect in each environment
+
+![hub_spoke](./images/hub_spoke.png)
+
+
+### Application
+
+Base applications in cluster is:
+- ArgoCD
+- Cert-manager
+- External Secrets Operator
+- Ingress Nginx
+- Prometheus
+- Grafana 
+
+![applications](./images/applications.png)
+
+# Creating Infrastructure
+
 #### OpenVPN Pre-requirements
 
 Create a ssh key-pair with key-gen command. Otherwise, you will have to change the ssh public key file path to access the VM in VPN module 
