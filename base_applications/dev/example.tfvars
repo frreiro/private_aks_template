@@ -1,0 +1,9 @@
+cluster_name            = 
+resource_group_name     =
+stage                   = 
+subscription_id         = 
+client_id               = 
+client_secret           = 
+tenant_id               = 
+object_id               = 
+vault_config_name       = 
